@@ -6,6 +6,8 @@
 ## Proje detayları
 Websocketin kanallarından gecen verı Handshake'de Sql'e Blacklıst sorgusu attıktan sonra RequestInterceptor'e verı gelır. burda kullanıcının verılerı alınır ve kafkaya yazılmaya başlar. izin verildikten sonra endpointten gelen veri Map turune donusturuldukten sonra kafkaya yazılır ve websocket-logs topicinde toplanır. FraudDetector websocket-logs'dekı CardNumber valuesını alır ve Kafka Streams kartin kac defa kullanildiginin count'unu tutar. bunlar 60 sanıyede bir sıfırlanır. dakıdada 5den fazla kullanılan kart streams'a yakalanır ve Alert-logs Kafka Topic'ine veri gonderır.
 
+## Onemlı not
+kodu localhostta calıstırırsanız HanshakeInterceptor ıstegınızı kabul etmeyecegı ıcın tam anlamıyla calısmaz
 
 # Kafka Streams ile Gerçek Zamanlı Fraud Detection (Kart Tekrar Kullanım Tespiti)
 
